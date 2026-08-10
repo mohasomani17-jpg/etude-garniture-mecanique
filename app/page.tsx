@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import GarnitureViewer from "./GarnitureViewer";
 
 const maintenanceData = [
   { name: "01CEX102PO", total: 33, seal: 19, rate: 57.6 },
@@ -67,7 +68,7 @@ export default function Home() {
         <nav className={menuOpen ? "nav is-open" : "nav"} aria-label="Navigation principale">
           <a href="#diagnostic" onClick={closeMenu}>Diagnostic</a>
           <a href="#solution" onClick={closeMenu}>Solution</a>
-          <a href="#conception" onClick={closeMenu}>Conception</a>
+          <a href="#modele-3d" onClick={closeMenu}>Modèle 3D</a>
           <a href="#risques" onClick={closeMenu}>Risques</a>
           <a className="nav-highlight" href="#decision" onClick={closeMenu}>Décision <span>↗</span></a>
         </nav>
@@ -191,9 +192,10 @@ export default function Home() {
 
       <section className="cad section container" id="conception">
         <div className="section-heading split-heading">
-          <div><p className="overline">05 · CONCEPTION CATIA V5</p><h2>De l’hypothèse<br /><span>à la maquette.</span></h2></div>
-          <p>La maquette contrôle l’architecture, l’empilement axial, les interfaces et l’encombrement avant consultation du fournisseur.</p>
+          <div><p className="overline">05 · CONCEPTION CATIA V5</p><h2>De l’hypothèse<br /><span>à l’inspection 3D.</span></h2></div>
+          <p>La maquette contrôle l’architecture, l’empilement axial, les interfaces et l’encombrement. Elle peut désormais être inspectée directement sous plusieurs perspectives.</p>
         </div>
+        <GarnitureViewer />
         <div className="cad-grid">
           <figure className="cad-main"><img src="/assets/maquette-catia.png" alt="Maquette CATIA V5 de la garniture mécanique" /><figcaption><span>Maquette numérique</span><b>Assemblage avec matériaux affectés</b></figcaption></figure>
           <div className="cad-stats">
