@@ -63,7 +63,7 @@ export default function Home() {
             </div>
             <p className="author-intro">
               Élève-ingénieur à l’ENSAM Casablanca, admis en double diplôme en
-              génie mécanique à Centrale Lyon – ENISE, je m’intéresse à la
+              génie mécanique à Centrale Lyon, je m’intéresse à la
               conception mécanique, aux systèmes de pompage et à la maintenance
               industrielle.
             </p>
@@ -85,7 +85,7 @@ export default function Home() {
             <div className="author-details">
               <div><small>FORMATION</small><strong>ENSAM Casablanca</strong></div>
               <div><small>PROJET INDUSTRIEL</small><strong>TAQA Morocco</strong></div>
-              <div><small>POURSUITE ACADÉMIQUE</small><strong>Centrale Lyon – ENISE</strong></div>
+              <div><small>POURSUITE ACADÉMIQUE</small><strong>Centrale Lyon</strong></div>
             </div>
           </div>
         </div>
