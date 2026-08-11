@@ -1,4 +1,5 @@
 import { axes } from "./site-content";
+import BrandMark from "./BrandMark";
 
 export default function Home() {
   return (
@@ -12,7 +13,10 @@ export default function Home() {
             <a className="primary-button" href="#axes">Explorer les axes <span>↓</span></a>
             <a className="ghost-button" href="/conception">Manipuler le modèle 3D <span>↗</span></a>
           </div>
-          <div className="author-chip"><span>ME</span><div><b>Mohammed Essommani</b><small>Génie des systèmes mécaniques industriels</small></div></div>
+          <div className="author-chip">
+            <BrandMark className="author-chip-logo" />
+            <div><b>Mohammed Essommani</b><small>Arts &amp; Métiers · Génie mécanique</small></div>
+          </div>
         </div>
 
         <div className="hero-media">
@@ -49,6 +53,14 @@ export default function Home() {
           <div className="about-author-copy">
             <p className="overline">PORTEUR DE L’ÉTUDE</p>
             <h2>Comprendre l’existant.<br /><span>Concevoir le progrès.</span></h2>
+            <div className="formation-signature" aria-label="Identité Arts et Métiers et ingénierie mécanique">
+              <BrandMark className="formation-signature-mark" />
+              <div>
+                <small>IDENTITÉ PERSONNELLE</small>
+                <strong>Arts &amp; Métiers</strong>
+                <span>Ingénierie mécanique · Conception industrielle</span>
+              </div>
+            </div>
             <p className="author-intro">
               Élève-ingénieur à l’ENSAM Casablanca, admis en double diplôme en
               génie mécanique à Centrale Lyon – ENISE, je m’intéresse à la

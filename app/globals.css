@@ -51,21 +51,15 @@ section[id] { scroll-margin-top: 86px; }
   box-shadow: 0 18px 48px rgba(0,0,0,.18);
 }
 .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
-.brand-symbol {
+.brand-mark {
   flex: 0 0 auto;
   width: 42px;
   height: 42px;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
-  background: var(--lime);
-  color: var(--ink);
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: -.05em;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(200,244,61,.13));
 }
 .brand-text { display: grid; gap: 2px; }
-.brand-text b { font-size: 12px; letter-spacing: .02em; }
+.brand-text b { font-size: 12px; letter-spacing: .01em; }
 .brand-text small { color: #9eaaad; font-size: 10px; }
 .nav { display: flex; align-items: center; gap: 28px; font-size: 12px; font-weight: 650; }
 .nav > a { color: #c4ccce; transition: color .2s ease, transform .2s ease; }
@@ -107,7 +101,7 @@ section[id] { scroll-margin-top: 86px; }
 .primary-button:hover, .ghost-button:hover { transform: translateY(-2px); }
 .ghost-button:hover { background: #1b272a; }
 .author-chip { display: flex; align-items: center; gap: 12px; margin-top: 54px; }
-.author-chip > span { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid #445054; border-radius: 50%; color: var(--lime); font-size: 11px; font-weight: 850; }
+.author-chip-logo { width: 42px; height: 42px; flex: 0 0 auto; filter: drop-shadow(0 8px 18px rgba(200,244,61,.12)); }
 .author-chip div { display: grid; gap: 3px; }
 .author-chip b { font-size: 12px; }
 .author-chip small { color: #7f8b8d; font-size: 10px; }
@@ -371,7 +365,7 @@ footer { padding: 58px 0 28px; background: var(--ink); color: white; }
   .section { padding-block: 82px; }
   section[id] { scroll-margin-top: 78px; }
   .site-header { top: 10px; width: calc(100% - 20px); height: 60px; border-radius: 16px; padding: 7px 8px 7px 9px; }
-  .brand-symbol { width: 40px; height: 40px; }
+  .brand-mark { width: 40px; height: 40px; }
   .brand-text small { display: none; }
   .menu-toggle { display: block; }
   .nav { position: fixed; top: 80px; left: 10px; right: 10px; height: calc(100dvh - 90px); display: flex; flex-direction: column; align-items: stretch; justify-content: center; gap: 0; padding: 24px; border: 1px solid var(--dark-line); border-radius: 22px; background: rgba(11,21,24,.98); opacity: 0; pointer-events: none; transform: translateY(-12px); transition: opacity .25s ease, transform .25s ease; }
@@ -619,6 +613,24 @@ footer { padding: 58px 0 28px; background: var(--ink); color: white; }
   letter-spacing: -.067em;
 }
 .about-author-copy h2 span { color: var(--lime-dark); font-weight: 360; }
+.formation-signature {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 28px;
+  padding: 12px 18px 12px 12px;
+  border: 1px solid rgba(11,21,24,.12);
+  border-radius: 18px;
+  background: rgba(255,254,250,.62);
+  box-shadow: 0 18px 50px rgba(11,21,24,.07);
+  backdrop-filter: blur(12px);
+}
+.formation-signature-mark { width: 58px; height: 58px; flex: 0 0 auto; }
+.formation-signature > div { display: grid; gap: 3px; }
+.formation-signature small { color: #7c8789; font-size: 7px; font-weight: 850; letter-spacing: .13em; }
+.formation-signature strong { font-size: 16px; letter-spacing: -.025em; }
+.formation-signature span { color: var(--muted); font-size: 9px; }
 .author-intro {
   max-width: 720px;
   margin: 38px 0 0;
@@ -699,6 +711,10 @@ footer { padding: 58px 0 28px; background: var(--ink); color: white; }
   .about-author-grid { grid-template-columns: 1fr; gap: 64px; }
   .author-portrait { width: min(100%,430px); margin-inline: auto; }
   .about-author-copy h2 { font-size: clamp(43px,12.5vw,58px); }
+  .formation-signature { width: 100%; padding-right: 12px; }
+  .formation-signature-mark { width: 52px; height: 52px; }
+  .formation-signature strong { font-size: 15px; }
+  .formation-signature span { font-size: 8px; }
   .author-intro { margin-top: 30px; font-size: 17px; }
   .author-bio { font-size: 13px; }
   .author-expertise { margin-top: 24px; }

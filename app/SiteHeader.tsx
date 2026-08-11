@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { axes } from "./site-content";
+import BrandMark from "./BrandMark";
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,8 +17,8 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <a className="brand" href="/" aria-label="Accueil">
-        <span className="brand-symbol">ME</span>
-        <span className="brand-text"><b>Seal / 02CEX202PO</b><small>Étude de modernisation</small></span>
+        <BrandMark className="brand-mark" />
+        <span className="brand-text"><b>Mohammed Essommani</b><small>Arts &amp; Métiers · Ingénierie mécanique</small></span>
       </a>
       <nav className={menuOpen ? "nav is-open" : "nav"} aria-label="Navigation principale">
         {axes.map((axis) => (
