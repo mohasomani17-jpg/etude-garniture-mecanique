@@ -18,7 +18,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <a className="brand" href="/" aria-label="Accueil">
         <BrandMark className="brand-mark" />
-        <span className="brand-text"><b>Mohammed Essommani</b><small>Arts &amp; Métiers · Ingénierie mécanique</small></span>
+        <span className="brand-text"><b>Mohammed Essommani</b><small>Arts &amp; Métiers · Génie mécanique</small></span>
       </a>
       <nav className={menuOpen ? "nav is-open" : "nav"} aria-label="Navigation principale">
         {axes.map((axis) => (

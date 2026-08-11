@@ -6,6 +6,8 @@
   --white: #fffefa;
   --lime: #c8f43d;
   --lime-dark: #63851c;
+  --brand-blue: #243c78;
+  --brand-copper: #c77b3d;
   --orange: #ff6534;
   --muted: #657074;
   --line: rgba(11, 21, 24, 0.14);
@@ -56,7 +58,7 @@ section[id] { scroll-margin-top: 86px; }
   width: 42px;
   height: 42px;
   display: block;
-  filter: drop-shadow(0 8px 16px rgba(200,244,61,.13));
+  filter: drop-shadow(0 9px 18px rgba(36,60,120,.28));
 }
 .brand-text { display: grid; gap: 2px; }
 .brand-text b { font-size: 12px; letter-spacing: .01em; }
@@ -101,7 +103,7 @@ section[id] { scroll-margin-top: 86px; }
 .primary-button:hover, .ghost-button:hover { transform: translateY(-2px); }
 .ghost-button:hover { background: #1b272a; }
 .author-chip { display: flex; align-items: center; gap: 12px; margin-top: 54px; }
-.author-chip-logo { width: 42px; height: 42px; flex: 0 0 auto; filter: drop-shadow(0 8px 18px rgba(200,244,61,.12)); }
+.author-chip-logo { width: 42px; height: 42px; flex: 0 0 auto; filter: drop-shadow(0 8px 18px rgba(36,60,120,.24)); }
 .author-chip div { display: grid; gap: 3px; }
 .author-chip b { font-size: 12px; }
 .author-chip small { color: #7f8b8d; font-size: 10px; }
@@ -523,7 +525,8 @@ footer { padding: 58px 0 28px; background: var(--ink); color: white; }
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 7% 12%, rgba(200,244,61,.17), transparent 22%),
+    radial-gradient(circle at 7% 12%, rgba(36,60,120,.13), transparent 23%),
+    radial-gradient(circle at 92% 84%, rgba(199,123,61,.10), transparent 24%),
     var(--paper-2);
 }
 .about-author:after {
