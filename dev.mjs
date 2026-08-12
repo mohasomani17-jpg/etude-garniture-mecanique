@@ -1,0 +1,29 @@
+import { spawn } from "node:child_process";
+
+const forwarded = process.argv.slice(2);
+const args = [];
+
+for (let index = 0; index < forwarded.length; index += 1) {
+  const argument = forwarded[index];
+
+  if (argument === "--host") {
+    args.push("-H", forwarded[index + 1]);
+    index += 1;
+    continue;
+  }
+
+  if (argument === "--strictPort") continue;
+
+  args.push(argument);
+}
+
+const child = spawn(
+  process.execPath,
+  ["node_modules/next/dist/bin/next", "dev", ...args],
+  { stdio: "inherit" },
+);
+
+child.on("exit", (code, signal) => {
+  if (signal) process.kill(process.pid, signal);
+  else process.exit(code ?? 0);
+});
